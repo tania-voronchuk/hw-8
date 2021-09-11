@@ -1,0 +1,153 @@
+.menu-toggle{  
+    display: none; 
+  }
+
+@media screen and (max-width: 767px) { 
+ .menu-toggle { 
+   display: inline-flex; 
+   background-color: transparent;
+   border: none;
+   margin-right: 0;
+   padding: 0;
+   line-height: 0;
+  }
+}
+
+.close-btn { 
+    background-color: transparent;
+    border: none;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+
+.menu-toggle__icon-burger:focus {
+    fill: var(--accent-color);
+}
+ 
+ .menu-toggle .mobile-menu__icon-close {  
+     display: none;
+ }
+ 
+ .menu-toggle .is-open .mobile-menu__icon-close {  
+     display: block;
+ }
+ 
+ .menu-toggle .is-open .menu-toggle__icon-burger {  
+     display: none;
+ }
+ 
+ .menu-container { 
+     position: fixed;
+     z-index: 100;
+     left: 0;
+     top: 0;
+     width: 100vw;
+     height: 100vh;
+     background-color: var(--primery-background-color);
+ 
+     opacity: 0;
+     visibility: hidden;
+     pointer-events: none;
+ 
+     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+  .menu-container .is-open {
+     opacity: 1;
+     visibility: visible;
+     pointer-events: auto;
+   }
+ 
+   .mobile-menu { 
+     position: relative;
+     padding-top: 48px;
+     padding-left: 40px;
+     margin: 0;
+ }
+ 
+ .mobile-menu__icon-close:focus,
+ .mobile-menu__icon-close:hover {
+     fill: var(--accent-color); 
+     }
+ 
+ .close-btn { 
+     position: absolute;
+     display: flex;
+     top: 0;
+     right: 0;
+}
+     
+ .mobile-menu__nav-item { 
+
+    &:not(:last-child) {
+      padding-bottom: 32px;
+      flex-wrap: wrap;
+    }
+ }
+ 
+ .mobile-menu__link  {
+     @include font (40px, 500, 1.14, 0.02em); 
+     color: var(--title-text-color);
+ 
+     &:focus {
+       color: var(--accent-color);
+    } 
+ } 
+ 
+ .mobile-menu__contact-list { 
+     padding-top: 302px;
+     padding-bottom: 64px;
+     flex-wrap: wrap;
+ }
+ 
+ .mobile-menu__contact-item { 
+     padding-bottom: 32px;
+ }
+ 
+ .mobile-menu__link-contact {
+     @include font (34px, 500, 1.17, 0.02em); 
+     color: var(--accent-color);
+ } 
+ 
+ .mobile-menu__link-mail  {
+     @include font (24px, 500, 1.16, 0.02em); 
+     color: var(--primery-text-color);
+ } 
+ 
+ .mobile-menu__social-list  {
+     display: flex;
+     padding-bottom: 48px;
+     justify-content: flex-start;
+     align-items: center;
+     flex-wrap: wrap;
+ } 
+ 
+ .mobile-menu__social-link {
+     @include font (18px, 500, 1.22, 0.02em); 
+     color: var(--accent-color);
+ }
+ .mobile-menu__social-item:not(:last-child) {
+     margin-right: 10px;
+     padding-right: 10px;
+     border-right: 2px solid rgba(33, 33, 33, 0.2);
+     height: 22px;
+ }   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

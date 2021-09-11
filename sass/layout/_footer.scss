@@ -1,0 +1,28 @@
+@media screen and (min-width: 480px) {
+    .footer {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 768px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer {
+        display: flex;
+        justify-content: normal;
+        width: 1200px;
+    }
+}
+
+.footer-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--secondary-background-color);
+}

@@ -1,0 +1,107 @@
+@media screen and (min-width: 480px) {
+    .team-list {
+        margin-top: 30px;
+    } 
+    .team-thumb {
+        margin-right: 0;
+        margin-bottom: 30px; 
+    } 
+} 
+
+@media screen and (min-width: 768px) {
+    .team-list {
+        display: flex;
+        width: 768px;
+    }
+    .team-thumb {
+        flex-basis: calc(100% / 2 - 30px);
+    } 
+    //    &:not(:nth-child(2n)) {
+    //    margin-right: 30px;
+    //}
+        &:not(:nth-child(-n+2)) {
+        margin-bottom: 0;
+    }   
+} 
+
+@media screen and (min-width: 1200px) {
+    .team-thumb {
+        flex-basis: calc(100% / 4 - 30px);
+        margin-right: 30px;
+        margin-bottom: 0;
+    } 
+    .team-list {  
+        margin-top: 50px;
+        margin-right: -30px;
+        width: 1200px;
+    } 
+} 
+
+.team-section {
+    background-color: #F5F4FA;
+} 
+
+.team-container {
+    text-align: center;
+} 
+
+.team-list {
+    flex-wrap: wrap;
+} 
+
+.team-thumb {
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: var(--primery-background-color);
+} 
+
+.team-card {
+    padding-top: 30px;
+    padding-bottom: 30px;  
+
+    &__title {
+       @include font (16px, 500, 1.19, 0.03em);
+       color: var(--title-text-color);
+
+       margin-top: 0;
+       margin-bottom: 10px;
+}
+    &__text {
+       font-size: 16px;
+       line-height: 1.19;
+       letter-spacing: 0.03em;
+
+       margin: 0;
+  }
+}  
+
+.team-card__social {
+    @extend %align;
+    margin-top: 16px;
+}
+
+.team-card__social-icon{
+    width: 44px;
+    height: 44px; 
+
+    &:not(:last-child) {
+       margin-right: 10px; 
+    }
+} 
+
+.team-card__social-link {
+    @extend %align;
+    @include size-radius (100%, 100%, 50%);
+    fill: var(--icon-color);
+    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+       fill: var(--primery-background-color);
+       background-color: var(--accent-color);
+    }
+}   

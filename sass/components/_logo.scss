@@ -1,0 +1,27 @@
+.logo {
+    @include font (26px, 700, 1.19,  0.03em);  
+ 
+    font-family: 'Raleway', sans-serif;
+    color: var(--accent-color);
+    font-style: normal;
+
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-right: 93px;
+
+    &__header {
+    color: #000000;
+}
+    &-footer__span-white {
+    color: #FFFFFF
+  }
+}  
+
+@media screen and (min-width: 480px) {
+     .logo {
+       margin: 0;
+      }
+    } 
+
+ 
+

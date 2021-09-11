@@ -1,0 +1,49 @@
+@media screen and (min-width: 480px) {
+    .footer-address-card {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer-address-card {
+        margin-right: 204px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer-address-card {
+        text-align: start;
+        margin-right: 70px;
+    }
+}
+
+address {
+    font-style: normal;
+    margin-top: 20px;
+}
+
+.address-list  {
+    margin-top: 9px;
+
+    &__map {
+      @include font (14px, 400, 1.7, 0.03em);
+      color: #FFFFFF;
+      font-family: 'Roboto', sans-serif;
+  }
+    &__link {
+      color: rgba(255, 255, 255, 0.6);
+   }
+}
+
+.footer__title {
+    @include font (14px, 700, 1.14, 0.03em);
+    color: var(--primery-background-color);
+
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+} 
+
+
+

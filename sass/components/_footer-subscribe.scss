@@ -1,0 +1,72 @@
+@media screen and (min-width: 480px) {
+    .footer-subscribe {
+        text-align: center;
+
+      &__input {
+        @include size-radius (450px, 50px, 4px);
+        margin-bottom: 20px;   
+       } 
+    }  
+}  
+
+@media screen and (min-width: 768px) {
+      .footer-subscribe__input {
+        display: flex;
+        }
+    } 
+
+@media screen and (min-width: 1200px) {
+    form {
+     display: flex;
+     align-items: flex-end;
+  }    
+    .footer-subscribe {
+     padding-top: 12px;
+     text-align: start; 
+     margin-bottom: 0; 
+ }
+    .footer-subscribe__input {      
+       @include size-radius (358px, 50px, 4px);
+       margin-right: 10px;
+       margin-bottom: 0;
+    } 
+} 
+
+.footer-subscribe {
+    &__button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      @include size-radius (200px, 50px, 4px);
+
+      @include font (16px, 700, 1.87, 0.06em);
+      color: var(--primery-background-color);
+
+      padding: 0;
+
+      border: none;
+      background-color: var(--accent-color);
+
+      cursor: pointer;
+}
+    &__icon--send {
+      fill: var(--primery-background-color);
+      margin-left: 10px;
+   }
+}   
+
+.footer-subscribe__input {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: var(--secondary-background-color);
+    
+    padding-left: 16px;
+    margin-top: 20px;
+    margin-right: 10px;
+
+    &::placeholder  {
+      @include font (16px, 400, 1.25, 0.03em); 
+      color: rgba(255, 255, 255, 0.6);
+   }
+}   
+
+

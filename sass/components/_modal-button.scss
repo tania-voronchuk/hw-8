@@ -1,0 +1,14 @@
+.modal-button {
+    @include font (16px, 700, 1.9, 0.06em); 
+
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF; 
+    background-color: var(--accent-color);
+    cursor: pointer; 
+
+    border-radius: 4px;
+    padding: 10px 32px;
+    min-width: 200px;
+    margin-top: 30px;
+    border-color: var(--accent-color);
+}   

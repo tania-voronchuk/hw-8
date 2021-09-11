@@ -1,0 +1,151 @@
+.form-card {
+    width: 100%;
+    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    &__title {
+      @include font (20px, 700, 1.15, 0.03em);
+      color: var(--title-text-color);
+
+      margin-bottom: 12px;
+      margin-top: 0;
+  }
+    &__label {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      margin-bottom: 10px;
+      padding: 0;
+      color: rgba(117, 117, 117, 1);
+      @include font (12px, 400, 1.17, 0.01em);
+
+      margin-bottom: 10px;
+      margin-top: 0;
+      margin-left: 0;
+  }
+    &__policy {
+      @extend %align;
+    
+      margin-top: 20px;
+    
+      @include font (14px, 400, 1.7, 0.03em);
+      color: var(--primery-text-color);
+    
+      cursor: pointer;
+  }
+    &__link {
+      color: var(--accent-color);
+      text-decoration: underline;
+  }
+    
+    &__button-submit {
+      @include size-radius (200px, 50px, 4px);
+      border: none;
+      color: var(--primery-background-color);
+      background-color: var(--accent-color);
+    
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 30px;
+    
+      cursor: pointer;
+      box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+    }
+
+.form-card__input {
+    @include size-radius (100%, 40px, 4px);
+    padding-left: 42px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 4px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    outline: none;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-color: var(--accent-color);  
+  }
+    &:hover + .form-card__icon,
+    &:focus + .form-card__icon {
+      fill: var(--accent-color)
+    } 
+  }
+} 
+
+.form-card__icon {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    
+    padding-left: 12px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }    
+}
+
+textarea {
+    resize: none;
+    @include size-radius (100%, 120px, 4px);
+    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-left: 16px;  
+    margin-top: 4px;
+    
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    outline: none;
+
+    &:hover, 
+    &:focus {
+      border-color: var(--accent-color);
+}
+
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+
+      @include font (14px, 400, 1.17, 0.03em);
+    }
+} 
+
+.form-card__icon--check {
+    @extend %align;
+    @include size-radius (16px, 15px, 4px);
+    border: 2px solid #212121;
+    
+    margin-right: 7px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-card__checkbox {
+    appearance: none;
+    position: absolute;
+
+    &:checked + .form-card__icon--check {
+        background-color: var(--accent-color);
+        background-origin: border-box; 
+        border-color: var(--accent-color);
+        background-image: url("../images/check.svg");
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .form-card__policy {
+        @include font (12px, 400, 1.16, 0.03em);    
+    }
+    .form-card__link {
+        @include font (12px, 400, 1.16, 0.03em);  
+   }
+}
